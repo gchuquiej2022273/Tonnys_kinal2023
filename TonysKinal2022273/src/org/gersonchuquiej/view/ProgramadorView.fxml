@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="590.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.gersonchuquiej.controller.ProgramadorController">
+   <children>
+      <Pane layoutX="-1.0" layoutY="-5.0" prefHeight="601.0" prefWidth="252.0" style="-fx-background-color: #0c5b4b;">
+         <children>
+            <ImageView fitHeight="61.0" fitWidth="71.0" layoutX="100.0" layoutY="520.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/Regresar.png" />
+               </image>
+            </ImageView>
+            <Pane layoutX="54.0" layoutY="70.0" prefHeight="149.0" prefWidth="155.0" style="-fx-background-color: #fbc305; -fx-background-radius: 500 500 50 50;">
+               <children>
+                  <ImageView fitHeight="179.0" fitWidth="262.0" layoutX="14.0" layoutY="-15.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/iconProgramador.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <ImageView fitHeight="287.0" fitWidth="203.0" layoutX="24.0" layoutY="226.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/Programador.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="21.0" layoutY="14.0" prefHeight="70.0" prefWidth="227.0" text="Programador">
+               <font>
+                  <Font name="Arial Bold" size="35.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0" startX="0.05238095238095239" startY="0.15238095238095234">
+                     <stops>
+                        <Stop color="#faf7e1" />
+                        <Stop color="#fbc305" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Label>
+         </children></Pane>
+      <Label layoutX="349.0" layoutY="116.0" prefHeight="61.0" prefWidth="677.0" text="GERSON EMMANUEL CHUQUIEJ PIRIR" textFill="#a35045">
+         <font>
+            <Font name="Arial Bold" size="26.0" />
+         </font>
+      </Label>
+      <Label layoutX="394.0" layoutY="177.0" prefHeight="61.0" prefWidth="677.0" text="Ascesor tecnico de tonnys kinal" textFill="#a35045">
+         <font>
+            <Font name="Arial Bold" size="26.0" />
+         </font>
+      </Label>
+      <Label layoutX="425.0" layoutY="245.0" prefHeight="61.0" prefWidth="677.0" text="gchuquiej-2022273@kinal.edu.gt" textFill="#a35045">
+         <font>
+            <Font name="Arial Bold" size="26.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

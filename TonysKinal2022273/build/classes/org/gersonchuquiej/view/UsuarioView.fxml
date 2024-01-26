@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="590.0" prefWidth="1227.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.gersonchuquiej.controller.UsuariosController">
+   <children>
+      <AnchorPane layoutX="1.0" layoutY="4.0" prefHeight="581.0" prefWidth="276.0" style="-fx-background-color: #0c3a32;">
+         <children>
+            <VBox layoutY="284.0" prefHeight="133.0" prefWidth="276.0" style="-fx-background-color: #0c3a32;">
+               <children>
+                  <Button fx:id="btnNuevo" alignment="TOP_LEFT" mnemonicParsing="false" onAction="#nuevo" prefHeight="45.0" prefWidth="263.0" styleClass="button1" stylesheets="@../resource/TonnysKinal.css" text="Nuevo">
+                     <graphic>
+                        <ImageView fx:id="imgNuevo" fitHeight="44.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/Agregar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnEliminar" alignment="TOP_LEFT" mnemonicParsing="false" prefHeight="55.0" prefWidth="276.0" styleClass="button1" stylesheets="@../resource/TonnysKinal.css" text="Eliminar">
+                     <graphic>
+                        <ImageView fx:id="imgEliminar" fitHeight="44.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/Eliminar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </VBox>
+            <Pane layoutX="32.0" layoutY="60.0" prefHeight="170.0" prefWidth="188.0" style="-fx-background-color: #fbc305; -fx-background-radius: 500 500 50 50;">
+               <children>
+                  <ImageView fitHeight="144.0" fitWidth="169.0" layoutX="25.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/Login.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Label layoutX="22.0" layoutY="-1.0" prefHeight="70.0" prefWidth="242.0" text="Usuario">
+               <font>
+                  <Font name="Arial Bold" size="45.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0" startX="0.05238095238095239" startY="0.15238095238095234">
+                     <stops>
+                        <Stop color="#faf7e1" />
+                        <Stop color="#fbc305" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Pane layoutX="275.0" layoutY="4.0" prefHeight="581.0" prefWidth="949.0" style="-fx-background-color: #16456B;">
+         <children>
+            <TextField fx:id="txtPasword" layoutX="293.0" layoutY="403.0" prefHeight="47.0" prefWidth="346.0" />
+            <Label layoutX="79.0" layoutY="141.0" prefHeight="55.0" prefWidth="233.0" text="Código Usuario :" textFill="WHITE">
+               <font>
+                  <Font size="26.0" />
+               </font>
+            </Label>
+            <Label layoutX="79.0" layoutY="208.0" prefHeight="55.0" prefWidth="233.0" text="Nombre Usuario :" textFill="WHITE">
+               <font>
+                  <Font size="26.0" />
+               </font>
+            </Label>
+            <Label layoutX="77.0" layoutY="267.0" prefHeight="55.0" prefWidth="233.0" text="Apellido Usuario :" textFill="WHITE">
+               <font>
+                  <Font size="26.0" />
+               </font>
+            </Label>
+            <Label layoutX="76.0" layoutY="333.0" prefHeight="55.0" prefWidth="233.0" text="Usuario :" textFill="WHITE">
+               <font>
+                  <Font size="26.0" />
+               </font>
+            </Label>
+            <Label layoutX="77.0" layoutY="399.0" prefHeight="55.0" prefWidth="233.0" text="Contraseña :" textFill="WHITE">
+               <font>
+                  <Font size="26.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtCodgoUsuario" layoutX="293.0" layoutY="149.0" prefHeight="47.0" prefWidth="346.0" />
+            <TextField fx:id="txtNombreUsuario" layoutX="293.0" layoutY="212.0" prefHeight="47.0" prefWidth="346.0" />
+            <TextField fx:id="txtApellidoUsuario" layoutX="293.0" layoutY="271.0" prefHeight="47.0" prefWidth="346.0" />
+            <TextField fx:id="txtUsuario" layoutX="293.0" layoutY="337.0" prefHeight="47.0" prefWidth="346.0" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

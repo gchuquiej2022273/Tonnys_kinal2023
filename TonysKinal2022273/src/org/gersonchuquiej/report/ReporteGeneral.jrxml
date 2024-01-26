@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReporteGeneral" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="9b54bf5e-0e06-4647-be95-b78c1e3e5216">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="74"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[call sp_ReporteGeneral();]]>
+	</queryString>
+	<field name="nombreEmpresa" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cantidadPresupuesto" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="codigoServicio" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tipoServicio" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombresEmpleado" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="apellidoEmpleado" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="descripcion" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="codigoPlato" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombrePlato" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="descripcionTipoPlato" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cantidad" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="precioPlato" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="codigoProducto" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombreProducto" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<variable name="nombrePlato_1" class="java.lang.Integer" resetType="Column" calculation="Count">
+		<variableExpression><![CDATA[$F{nombrePlato}]]></variableExpression>
+	</variable>
+	<background>
+		<band height="555" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="802" height="555" backcolor="#CCFFCC" uuid="383de609-ddf7-408b-8844-f411e0791c52"/>
+			</rectangle>
+		</band>
+	</background>
+	<pageHeader>
+		<band height="51" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="52" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="12" width="802" height="33" backcolor="#CCFFFF" uuid="42f23a35-4c82-42c0-911f-94fe034d2fc7"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="30" y="25" width="111" height="20" uuid="cd196006-8ab3-436d-9f9a-37d07fac6fbb"/>
+				<text><![CDATA[nombre de la Empresa]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="261" y="25" width="100" height="20" uuid="8e47c7c8-8c5b-4f7a-8c13-3d3b811f23b9"/>
+				<text><![CDATA[codigoServicio]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="150" y="25" width="100" height="20" uuid="b7c527a9-aaf6-4aaf-bc5e-6e84bdc58096"/>
+				<text><![CDATA[tipo De Servicio]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="375" y="25" width="100" height="20" uuid="915ba1ac-888a-4950-a17b-e157f704082d"/>
+				<text><![CDATA[cantidadPresupuesto]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="494" y="25" width="100" height="20" uuid="50741bbc-7030-4619-8e59-6d8979f3f2bd"/>
+				<text><![CDATA[nombresEmpleado]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="606" y="25" width="100" height="20" uuid="dd338dc5-87e3-459f-b575-7a299964d3a3"/>
+				<text><![CDATA[apellidoEmpleado]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="702" y="25" width="100" height="20" uuid="be2a0ccb-a170-4c98-b12e-469b28f77fe2"/>
+				<text><![CDATA[cantidad]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="233" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="12" width="802" height="48" backcolor="#CCCCFF" uuid="b9e5975b-f85e-4bac-923c-6807494f6dd8"/>
+			</rectangle>
+			<textField>
+				<reportElement x="30" y="19" width="100" height="20" uuid="fd91c042-1f4b-4273-9038-9997c24120d1"/>
+				<textFieldExpression><![CDATA[$F{nombreEmpresa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="261" y="19" width="100" height="20" uuid="2da45354-412b-4cd9-86b3-4da197e884a8"/>
+				<textFieldExpression><![CDATA[$F{codigoServicio}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="150" y="19" width="100" height="20" uuid="2fb172dc-f97c-43cf-a7a9-255ef2d73f9b"/>
+				<textFieldExpression><![CDATA[$F{tipoServicio}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="363" y="19" width="119" height="31" uuid="cb7cc1ea-fbd3-415b-8491-15029fb99d2e"/>
+				<textFieldExpression><![CDATA[$F{cantidadPresupuesto}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="494" y="15" width="112" height="35" uuid="e4f5059e-6d66-4d51-adb2-350557fd97fb"/>
+				<textFieldExpression><![CDATA[$F{nombresEmpleado}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="608" y="12" width="119" height="38" uuid="1b93668e-9299-4062-9e37-be230a228109"/>
+				<textFieldExpression><![CDATA[$F{apellidoEmpleado}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="732" y="19" width="100" height="20" uuid="1fcf9977-1bda-442e-b59a-6bd44160b940"/>
+				<textFieldExpression><![CDATA[$F{cantidad}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="0" y="108" width="802" height="48" backcolor="#CCCCFF" uuid="153b4906-5f4f-4cba-927a-6ba09ca719de"/>
+			</rectangle>
+			<textField>
+				<reportElement x="19" y="127" width="100" height="20" uuid="156af481-974e-4eee-bf90-c43d2dbf9a5b"/>
+				<textFieldExpression><![CDATA[$F{codigoPlato}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="0" y="67" width="802" height="33" backcolor="#CCFFFF" uuid="955a3b37-423c-449b-a8fb-8aa466ab051a"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="19" y="80" width="100" height="20" uuid="aa5fcbdc-b3e6-4946-848f-8505daabb47e"/>
+				<text><![CDATA[codigo Plato]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="123" y="127" width="100" height="20" uuid="8aef6a54-8abd-4036-85ce-ae0ac919d4e2"/>
+				<textFieldExpression><![CDATA[$F{nombrePlato}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="214" y="123" width="125" height="24" uuid="0e194462-d4c6-4143-9ab0-892e3854a5e7"/>
+				<textFieldExpression><![CDATA[$F{descripcionTipoPlato}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="356" y="123" width="113" height="20" uuid="65ebe916-2935-4339-a93b-0657ef499ee6"/>
+				<textFieldExpression><![CDATA[$F{cantidad}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="469" y="123" width="100" height="20" uuid="b33e157a-5b1d-4f71-bfc0-446989c1e94f"/>
+				<textFieldExpression><![CDATA[$F{precioPlato}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="578" y="127" width="100" height="20" uuid="fa032d1e-4ada-48fd-88d3-6269eaee1a8f"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{codigoProducto}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="690" y="127" width="112" height="20" uuid="edbfdc88-6df0-4a4e-815a-24a95a6cfcd5"/>
+				<textFieldExpression><![CDATA[$F{nombreProducto}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="130" y="80" width="68" height="20" uuid="23e15534-4e65-48d5-9394-2123d7c879c8"/>
+				<text><![CDATA[nombre Plato]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="223" y="80" width="116" height="20" uuid="2edeb8af-6ed9-4830-94eb-eb491812e71a"/>
+				<text><![CDATA[descripcion Tipo Plato]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="356" y="80" width="100" height="20" uuid="ab32d126-136f-4095-93f1-3ad56cc4a79e"/>
+				<text><![CDATA[cantidad]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="475" y="80" width="100" height="20" uuid="23ea0e8b-7b7d-48a7-a59a-656a645504eb"/>
+				<text><![CDATA[precio Plato]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="578" y="80" width="100" height="20" uuid="fba3d68a-1459-46de-aaab-8986591110e6"/>
+				<text><![CDATA[codigo Producto]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="702" y="80" width="100" height="20" uuid="9e2f0284-1cc4-49c6-8a8e-ca8bbc5f60ed"/>
+				<text><![CDATA[nombre Producto]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="69" splitType="Stretch"/>
+	</columnFooter>
+</jasperReport>
